@@ -6,5 +6,5 @@
     password: GL0b4l1z3
     port: 80
     script: |
-      cd /web/convert-docs/test/GeoPoseWeb/
-      git pull 
+      cd /web/convert-docs/test/
+      git clone https://github.com/ogctest/GeoPoseWeb.git
