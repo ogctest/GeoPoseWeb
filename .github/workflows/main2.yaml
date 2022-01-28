@@ -1,10 +1,18 @@
-- name: executing remote ssh commands using password
-  uses: appleboy/ssh-action@master
-  with:
-    host: convert-docs.opengeospatial.org
-    username: greg
-    password: GL0b4l1z3
-    port: 80
-    script: |
-      cd /web/convert-docs/test/
-      git clone https://github.com/ogctest/GeoPoseWeb.git
+name: remote ssh command
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+       host: convert-docs.opengeospatial.org
+       username: greg
+       password: GL0b4l1z3
+       port: 80
+       script: |
+         cd /web/convert-docs/test/
+         git clone https://github.com/ogctest/GeoPoseWeb.git
