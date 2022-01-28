@@ -11,9 +11,8 @@ jobs:
       with:
        host: convert-docs.opengeospatial.org
        username: greg
-       password: Gl0b4l1z3
+       key: ${{ secrets.KEY }}
        port: 7822
        script: |
-         ssh -p7822 greg@convert-docs.opengeospatial.org
          cd /web/convert-docs/test/
          git clone https://github.com/ogctest/GeoPoseWeb.git
