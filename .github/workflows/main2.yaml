@@ -1,0 +1,10 @@
+- name: executing remote ssh commands using password
+  uses: appleboy/ssh-action@master
+  with:
+    host: convert-docs.opengeospatial.org
+    username: greg
+    password: GL0b4l1z3
+    port: 80
+    script: |
+      cd /web/convert-docs/test/GeoPoseWeb/
+      git pull 
